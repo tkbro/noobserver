@@ -1,12 +1,19 @@
 ﻿namespace NoobServer
 {
+  using NoobServer.GameServer;
   using System;
 
-  class Program
+  public class Program
   {
-    static void Main(string[] args)
+    public static int Main(string[] args)
     {
-      Console.WriteLine("Hello World!");
+      var launcher = new Launcher();
+      if (!launcher.Run())
+      {
+        return -1;
+      }
+
+      return 0;
     }
   }
 }
