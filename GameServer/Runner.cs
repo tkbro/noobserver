@@ -18,9 +18,10 @@
       this.env = env;
     }
 
-    // run 함수를 single 버전과 multi 버전을 만들어야 할까?
     public bool Run()
     {
+      this.active = true; // tmp
+
       var prevTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
       while (this.active)
       {

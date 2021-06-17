@@ -10,12 +10,16 @@
   {
     public bool Run()
     {
-      // log?
-      // todo : network module run
-
       var env = new GameEnvironment();
-      var runner = new Runner(env);
 
+      var server = new Server();
+      if (server.Start() == false)
+      {
+        Console.WriteLine("Failed to listen start.");
+        return false;
+      }
+
+      var runner = new Runner(env);
       return runner.Run();
     }
   }
