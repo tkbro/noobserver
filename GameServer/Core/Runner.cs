@@ -1,4 +1,4 @@
-﻿namespace NoobServer.GameServer
+﻿namespace NoobServer.GameServer.Core
 {
   using System;
   using System.Collections.Generic;
@@ -28,8 +28,7 @@
         var currentTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
 
         long diff = prevTime - currentTime;
-        this.PhysicsLoop(diff);
-        this.LogicLoop(diff);
+        this.Update(diff);
         prevTime = currentTime;
 
         var now = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
@@ -44,18 +43,17 @@
       return false;
     }
 
-    public void PhysicsLoop(long elapsed)
+    public void Update(long elapsed)
     {
-      // foreach (reserved_physics_object_queue)
+      var jobs = this.env.JobQueue.UpdateJobs;
+      foreach (var job in jobs)
+      {
+        job.Update();
+      }
 
-      // IPhysicsObject.Collider
-      // aoi 에서 인접한 애들을 리스트로 관리?, 들어온느 순서대로 대충 큐잉?
-      // Collider 를 기준으로 충돌 여부를 판단해주면 되지않나?
-    }
+      this.env.JobQueue.ChangeFlag();
 
-    public void LogicLoop(long elapsed)
-    {
-      // IGamePlayObject.UpdateLogic?
+      // ...
     }
   }
 }

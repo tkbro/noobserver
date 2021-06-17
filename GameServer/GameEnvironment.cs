@@ -1,5 +1,6 @@
 ﻿namespace NoobServer.GameServer
 {
+  using NoobServer.GameServer.Core;
   using System;
   using System.Collections.Generic;
   using System.Linq;
@@ -12,6 +13,8 @@
     {
       this.Initialize();
     }
+
+    public UpdateJobQueue JobQueue { get; } = new UpdateJobQueue();
 
     private void Initialize()
     {
