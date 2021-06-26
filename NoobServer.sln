@@ -9,6 +9,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoobNetwork", "NoobNetwork\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacketGenerated", "PacketGenerated\PacketGenerated.csproj", "{20E4F9FC-95E0-4BD2-9329-9912D086A2AB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{64A0161E-2DE2-4721-9C7D-C940E765129D}"
+	ProjectSection(SolutionItems) = preProject
+		protoc\protoc.exe = protoc\protoc.exe
+		protoc\runProtoc.bat = protoc\runProtoc.bat
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoobPacketClient", "NoobPacketClient\NoobPacketClient.csproj", "{9BACB13C-D393-4BE6-8B65-13BC4B6D5B1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +35,10 @@ Global
 		{20E4F9FC-95E0-4BD2-9329-9912D086A2AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20E4F9FC-95E0-4BD2-9329-9912D086A2AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20E4F9FC-95E0-4BD2-9329-9912D086A2AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BACB13C-D393-4BE6-8B65-13BC4B6D5B1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BACB13C-D393-4BE6-8B65-13BC4B6D5B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BACB13C-D393-4BE6-8B65-13BC4B6D5B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BACB13C-D393-4BE6-8B65-13BC4B6D5B1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
