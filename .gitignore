@@ -134,3 +134,5 @@ _NCrunch*
 
 # packet generated file/directory
 [Gg]enerated/
+/.vs/NoobServer/DesignTimeBuild
+/.vs/NoobServer/v16/TestStore/0
