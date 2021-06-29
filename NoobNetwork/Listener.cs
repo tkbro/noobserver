@@ -1,11 +1,8 @@
 ﻿namespace NoobNetwork
 {
   using System;
-  using System.Collections.Generic;
-  using System.Linq;
   using System.Net;
   using System.Net.Sockets;
-  using System.Text;
   using System.Threading.Tasks;
 
   public class Listener
@@ -25,6 +22,8 @@
       }
       catch (SocketException e)
       {
+        Console.WriteLine(e);
+
         socket.Dispose();
         Task.Delay(1000).Wait();
       }
